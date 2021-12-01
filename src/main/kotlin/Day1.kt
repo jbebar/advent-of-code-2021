@@ -2,19 +2,25 @@ import Reader.readInputs
 
 class Day1A {
 
-    // For loops
     fun run() {
-        val inputMeasurements = readInputs()
 
+        // For loops way
+
+        val inputMeasurements = readInputs()
         var previousMeasurement: Int? = null
-        var increasedMeasurementCounts = 0
+        var result = 0
         for (currentMeasurement in inputMeasurements.toList()) {
             if (previousMeasurement != null && previousMeasurement < currentMeasurement) {
-                increasedMeasurementCounts++
+                result++
             }
             previousMeasurement = currentMeasurement
         }
-        println("Result $increasedMeasurementCounts")
+        println("Result 1A $result")
+
+        // Functional way
+
+        val resultFunctionalWay = inputMeasurements.windowed(2).count { e -> e[0] < e[1] }
+        println("Result 1A $resultFunctionalWay")
     }
 
 }
@@ -25,10 +31,10 @@ class Day1B {
     fun run() {
 
         // For loops way
-        val inputMeasurements = readInputs()
 
+        val inputMeasurements = readInputs()
         var previousMeasurement: Int? = null
-        var increasedMeasurementCounts = 0
+        var result = 0
 
         val nextMeasurements = mutableListOf<Int>()
         for (i in 2 until inputMeasurements.size) {
@@ -38,16 +44,17 @@ class Day1B {
 
         for (currentMeasurement in nextMeasurements) {
             if (previousMeasurement != null && previousMeasurement < currentMeasurement) {
-                increasedMeasurementCounts++
+                result++
             }
             previousMeasurement = currentMeasurement
         }
 
-        println("Result $increasedMeasurementCounts")
+        println("Result 1B $result")
 
         // Functional way
+
         val resultFunctionalWay = inputMeasurements.windowed(3, 1).map { it.sum() }.windowed(2).count { e -> e[0] < e[1] }
-        println("Result $resultFunctionalWay")
+        println("Result 1B $resultFunctionalWay")
     }
 
 }
