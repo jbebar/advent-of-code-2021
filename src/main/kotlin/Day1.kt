@@ -6,7 +6,7 @@ class Day1A {
 
         // For loops way
 
-        val inputMeasurements = readInputs()
+        val inputMeasurements = readInputs("Day1.txt").map { it.toInt() }
         var previousMeasurement: Int? = null
         var result = 0
         for (currentMeasurement in inputMeasurements.toList()) {
@@ -32,7 +32,7 @@ class Day1B {
 
         // For loops way
 
-        val inputMeasurements = readInputs()
+        val inputMeasurements = readInputs("Day1.txt").map { it.toInt() }
         var previousMeasurement: Int? = null
         var result = 0
 
@@ -59,10 +59,3 @@ class Day1B {
 
 }
 
-object Reader {
-
-    fun readInputs() = this::class.java.getResourceAsStream("Day1.txt")!!.reader().readLines().map {
-        it.toInt()
-    }
-
-}
