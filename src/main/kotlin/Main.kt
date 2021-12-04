@@ -3,4 +3,6 @@ fun main(){
     Day1B().run()
     Day2A().run()
     Day2B().run()
+    Day3A().run()
+    Day3B().run()
 }

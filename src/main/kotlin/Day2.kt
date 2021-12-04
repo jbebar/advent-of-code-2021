@@ -3,7 +3,7 @@ import Reader.readInputs
 class Day2A {
 
     fun run() {
-        val inputs = formatInput()
+        val inputs = retrieveBits()
 
         val horizontalPosition = inputs.filter {
             it.first == "forward"
@@ -31,7 +31,7 @@ class Day2B {
     class Coordinates(val aim: Int, val xPosition: Int, val depth: Int)
 
     fun run() {
-        val inputs = formatInput()
+        val inputs = retrieveBits()
         val result = inputs.fold(Coordinates(0, 0, 0)) { acc, (direction,value)->
 
             val nextAcc = when (direction) {
@@ -49,7 +49,7 @@ class Day2B {
 
 }
 
-private fun formatInput() = readInputs("Day2.txt").map {
+private fun retrieveBits() = readInputs("Day2.txt").map {
     it.split(" ")
 }.map {
     it.first() to it[1].toInt()
