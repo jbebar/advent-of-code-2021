@@ -1,8 +1,8 @@
 import Reader.readInputs
 
-class Day3A {
+class Day3A : Day() {
 
-    fun run() {
+    override fun run() : Int{
         val bits = retrieveBits()
         var gammaBits = ""
 
@@ -22,7 +22,7 @@ class Day3A {
         val epsilon = toEpsilon(gammaBits)
         val gamma = Integer.parseInt(gammaBits, 2)
 
-        println("Result 3A : ${gamma * epsilon}")
+        return gamma * epsilon
     }
 
     private fun toEpsilon(gammaBits: String): Int {
@@ -41,9 +41,9 @@ class Day3A {
 }
 
 
-class Day3B {
+class Day3B : Day() {
 
-    fun run() {
+    override fun run():Int {
         val bits = retrieveBits()
         val oxygenGeneratorRating = searchNumber(0, bits, true).let {
             Integer.parseInt(it, 2)
@@ -51,7 +51,7 @@ class Day3B {
         val c02ScrubberRating = searchNumber(0, bits, false).let {
             Integer.parseInt(it, 2)
         }
-        println("Result 3B : ${oxygenGeneratorRating * c02ScrubberRating}")
+        return oxygenGeneratorRating * c02ScrubberRating
     }
 
     private fun searchNumber(currentIndex: Int, bits: List<String>, isMostCommonBitCriteria: Boolean): String {

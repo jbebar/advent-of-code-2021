@@ -1,10 +1,12 @@
-fun main(){
-    Day1A().run()
-    Day1B().run()
-    Day2A().run()
-    Day2B().run()
-    Day3A().run()
-    Day3B().run()
-    Day4A().run()
-    Day4B().run()
+fun main(args: Array<String>) {
+    val result = Day::class.sealedSubclasses.first {
+        it.simpleName == args[0]
+    }.constructors.first().call().run()
+    println("Result ${args[0]} : $result")
+}
+
+sealed class Day {
+
+    abstract fun run(): Int
+
 }

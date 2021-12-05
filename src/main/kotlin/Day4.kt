@@ -55,9 +55,9 @@ class BingoBoard(private val squares: List<Square>, val firstWinningDraw: UInt? 
 
 }
 
-class Day4A {
+object Day4A : Day() {
 
-    fun run() {
+    override fun run(): Int {
         val draws = readDraws()
         val bingoBoards = readBingoBoards(readInputs("Day4.txt"))
 
@@ -72,14 +72,14 @@ class Day4A {
         }.let {
             it.unMarkedSum() * it.firstWinningDraw!!.toInt()
         }
-        println("Result 4A: $result")
+        return result
     }
 
 }
 
-class Day4B {
+object Day4B : Day() {
 
-    fun run() {
+    override fun run(): Int {
         val draws = readDraws()
 
         val bingoBoards = readBingoBoards(readInputs("Day4.txt"))
@@ -101,7 +101,7 @@ class Day4B {
         }.let { (lastWinningDraw, boards) ->
             lastWinningDraw * boards.unMarkedSum().toUInt()
         }
-        println("Result 4B: $result")
+        return result.toInt()
     }
 
 }
