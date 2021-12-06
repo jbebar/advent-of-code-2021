@@ -55,7 +55,7 @@ class BingoBoard(private val squares: List<Square>, val firstWinningDraw: UInt? 
 
 }
 
-object Day4A : Day() {
+class Day4A : Day() {
 
     override fun run(): Int {
         val draws = readDraws()
@@ -77,7 +77,7 @@ object Day4A : Day() {
 
 }
 
-object Day4B : Day() {
+class Day4B : Day() {
 
     override fun run(): Int {
         val draws = readDraws()
