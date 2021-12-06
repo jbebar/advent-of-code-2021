@@ -1,7 +1,7 @@
 fun main(args: Array<String>) {
     val result = Day::class.sealedSubclasses.first {
         it.simpleName == args[0]
-    }.constructors.first().call().run()
+    }.objectInstance!!.run()
     println("Result ${args[0]} : $result")
 }
 
