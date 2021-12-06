@@ -1,6 +1,6 @@
 import Reader.readInputs
 
-object Day2A : Day() {
+class Day2A : Day() {
 
     override fun run(): Int {
         val inputs = retrieveBits()
@@ -25,7 +25,7 @@ object Day2A : Day() {
 }
 
 
-object Day2B : Day() {
+class Day2B : Day() {
 
     class Coordinates(val aim: Int, val xPosition: Int, val depth: Int)
 

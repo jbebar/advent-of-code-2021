@@ -1,6 +1,6 @@
 import Reader.readInputs
 
-object Day1A : Day() {
+class Day1A : Day() {
 
     override fun run(): Int {
 
@@ -25,7 +25,7 @@ object Day1A : Day() {
 
 }
 
-object Day1B : Day() {
+class Day1B : Day() {
 
 
     override fun run(): Int {
