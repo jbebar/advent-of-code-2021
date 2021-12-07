@@ -20,11 +20,10 @@ internal class Day5KtTest {
         assert(segmentPoints.containsAll(listOf(Point(0, 0), Point(1, 1), Point(2, 2))))
     }
 
-
     @Test
     internal fun `should return segment for diagonal line at 45 degrees reverted`() {
-        val segmentPoints = toSegment(Point(2, 2), Point(0, 0))
-        assert(segmentPoints.containsAll(listOf(Point(0, 0), Point(1, 1), Point(2, 2))))
+        val segmentPoints = toSegment(Point(2, 0), Point(0, 2))
+        assert(segmentPoints.containsAll(listOf(Point(2, 0), Point(1,1),Point(0, 2))))
     }
 
     @Test

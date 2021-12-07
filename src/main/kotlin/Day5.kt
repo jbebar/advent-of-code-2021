@@ -53,13 +53,13 @@ class Day5B : Day() {
 fun toSegment(startPoint: Point, endPoint: Point): List<Point> {
     val horizontalPart = toCoordinateSuite(startPoint.y, endPoint.y)
     val verticalPart = toCoordinateSuite(startPoint.x, endPoint.x)
-    return if (horizontalPart.size == verticalPart.size) {
+    return if (horizontalPart.toList().size == verticalPart.toList().size) {
         horizontalPart.zip(verticalPart).map { (y, x) ->
             Point(y, x)
         }
-    } else if (verticalPart.isEmpty()) {
+    } else if (verticalPart.toList().isEmpty()) {
         horizontalPart.map { Point(y = it, x = startPoint.x) }
-    } else if (horizontalPart.isEmpty()) {
+    } else if (horizontalPart.toList().isEmpty()) {
         verticalPart.map { Point(y = startPoint.y, x = it) }
     } else {
         emptyList()
@@ -68,11 +68,11 @@ fun toSegment(startPoint: Point, endPoint: Point): List<Point> {
 
 private fun toCoordinateSuite(start: Int, end: Int) =
     if (start < end) {
-        (start..end).toList()
+        (start..end)
     } else if (start == end) {
         emptyList()
     } else {
-        (end..start).toList()
+        (end..start).reversed()
     }
 
 private fun String.toPoint() = split(",").let { coordinates -> Point(y = coordinates[0].toInt(), x = coordinates[1].toInt()) }
