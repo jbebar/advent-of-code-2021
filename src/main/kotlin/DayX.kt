@@ -1,6 +1,6 @@
 object DayXA : Day() {
 
-    override fun run(): Int {
+    override fun run(): Long {
         return 1
     }
 
@@ -8,7 +8,7 @@ object DayXA : Day() {
 
 object DayXB : Day() {
 
-    override fun run(): Int {
+    override fun run(): Long {
         return 1
     }
 

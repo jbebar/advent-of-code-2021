@@ -7,6 +7,6 @@ fun main(args: Array<String>) {
 
 sealed class Day {
 
-    abstract fun run(): Int
+    abstract fun run(): Long
 
 }
