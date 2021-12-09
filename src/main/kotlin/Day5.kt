@@ -4,7 +4,7 @@ data class Point(val y: Int, val x: Int)
 
 class Day5A : Day() {
 
-    override fun run(): Int {
+    override fun run(): Long {
         return readLines().map {
             it.first().toPoint() to it.last().toPoint()
         }.filter { (start, end) ->
@@ -21,7 +21,7 @@ class Day5A : Day() {
             }
         }.count {
             it.value >= 2
-        }
+        }.toLong()
     }
 
 }
@@ -29,7 +29,7 @@ class Day5A : Day() {
 
 class Day5B : Day() {
 
-    override fun run(): Int {
+    override fun run(): Long {
         val inputLines = readLines()
         return inputLines.map {
             it.first().toPoint() to it.last().toPoint()
@@ -45,7 +45,7 @@ class Day5B : Day() {
             }
         }.count {
             it.value >= 2
-        }
+        }.toLong()
     }
 
 }

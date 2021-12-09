@@ -2,7 +2,7 @@ import Reader.readInputs
 
 class Day2A : Day() {
 
-    override fun run(): Int {
+    override fun run(): Long {
         val inputs = retrieveBits()
 
         val horizontalPosition = inputs.filter {
@@ -19,7 +19,7 @@ class Day2A : Day() {
             }
         }
 
-        return depth * horizontalPosition
+        return (depth * horizontalPosition).toLong()
     }
 
 }
@@ -29,7 +29,7 @@ class Day2B : Day() {
 
     class Coordinates(val aim: Int, val xPosition: Int, val depth: Int)
 
-    override fun run(): Int {
+    override fun run(): Long {
         val inputs = retrieveBits()
         val result = inputs.fold(Coordinates(0, 0, 0)) { acc, (direction, value) ->
 
@@ -44,7 +44,7 @@ class Day2B : Day() {
             nextAcc
         }
         println("Result 2B ${result.xPosition * result.depth}")
-        return result.xPosition * result.depth
+        return (result.xPosition * result.depth).toLong()
     }
 
 }

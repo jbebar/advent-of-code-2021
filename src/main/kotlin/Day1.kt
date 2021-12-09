@@ -2,7 +2,7 @@ import Reader.readInputs
 
 class Day1A : Day() {
 
-    override fun run(): Int {
+    override fun run(): Long {
 
         // For loops way
 
@@ -20,7 +20,7 @@ class Day1A : Day() {
         // Functional way
 
         val resultFunctionalWay = inputMeasurements.windowed(2).count { e -> e[0] < e[1] }
-        return result
+        return result.toLong()
     }
 
 }
@@ -28,7 +28,7 @@ class Day1A : Day() {
 class Day1B : Day() {
 
 
-    override fun run(): Int {
+    override fun run(): Long {
 
         // For loops way
 
@@ -55,7 +55,7 @@ class Day1B : Day() {
 
         val resultFunctionalWay = inputMeasurements.windowed(3, 1).map { it.sum() }.windowed(2).count { e -> e[0] < e[1] }
         println("Result 1B $resultFunctionalWay")
-        return result
+        return result.toLong()
     }
 
 }
