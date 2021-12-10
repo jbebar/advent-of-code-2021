@@ -1,4 +1,4 @@
-object DayXA : Day() {
+class DayXA : Day() {
 
     override fun run(): Long {
         return 1
@@ -6,7 +6,7 @@ object DayXA : Day() {
 
 }
 
-object DayXB : Day() {
+class DayXB : Day() {
 
     override fun run(): Long {
         return 1
