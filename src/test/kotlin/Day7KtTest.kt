@@ -15,7 +15,7 @@ internal class Day7KtTest {
                 "11, 66",
             ]
     )
-    fun `should compute consumption for number of steps`(stepsCount: Int, fuelConsumption: Int) {
-        assertEquals(computeConsumption(stepsCount), fuelConsumption)
+    fun `should compute consumption for number of steps`(stepsCount: Int, expectedFuelConsumption: Int) {
+        assertEquals(computeConsumption(stepsCount), expectedFuelConsumption)
     }
 }
