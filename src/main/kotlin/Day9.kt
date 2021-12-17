@@ -24,22 +24,23 @@ fun String.read(): Map<Pair<Int, Int>, Int> {
 
 fun String.countRiskLevel(): Int {
     val map = this.read()
-    return map.entries.sumOf {
-        val y = it.key.first
-        val x = it.key.second
-        val value = map[(y to x)]
-
-        checkNotNull(value)
-
-        val isDiagonalLower = map[(y + 1 to x + 1)] strictlyAbove value && map[(y - 1 to x - 1)] strictlyAbove value
-        val isVerticalLower = map[(y + 1 to x)] strictlyAbove value && map[(y - 1 to x)] strictlyAbove value
-        val isHorizontalLower = map[(y to x + 1)] strictlyAbove value && map[(y to x - 1)] strictlyAbove value
-        if (isDiagonalLower && isVerticalLower && isHorizontalLower) {
-            value + 1
-        } else {
-            0
-        }
+    return map.entries.filter {
+        it.isLowPoint(map)
+    }.sumOf {
+        it.value + 1
     }
+}
+
+private fun Map.Entry<Pair<Int, Int>, Int>.isLowPoint(map: Map<Pair<Int, Int>, Int>): Boolean {
+    val y = key.first
+    val x = key.second
+    val value = map[(y to x)]
+    checkNotNull(value)
+
+    val isDiagonalLower = map[(y + 1 to x + 1)] strictlyAbove value && map[(y - 1 to x - 1)] strictlyAbove value
+    val isVerticalLower = map[(y + 1 to x)] strictlyAbove value && map[(y - 1 to x)] strictlyAbove value
+    val isHorizontalLower = map[(y to x + 1)] strictlyAbove value && map[(y to x - 1)] strictlyAbove value
+    return isDiagonalLower && isVerticalLower && isHorizontalLower
 }
 
 private infix fun Int?.strictlyAbove(other: Int) = this == null || this > other
