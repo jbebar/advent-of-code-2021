@@ -1,8 +1,11 @@
+package org.jbebar.aoc21.day5
+
+import Day
 import Reader.readInputs
 
 data class Point(val y: Int, val x: Int)
 
-class Day5A : Day() {
+class Day5A : Day {
 
     override fun run(): Long {
         return readLines().map {
@@ -27,7 +30,7 @@ class Day5A : Day() {
 }
 
 
-class Day5B : Day() {
+class Day5B : Day {
 
     override fun run(): Long {
         val inputLines = readLines()

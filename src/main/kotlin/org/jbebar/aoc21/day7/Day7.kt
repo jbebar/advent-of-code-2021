@@ -1,6 +1,10 @@
+package org.jbebar.aoc21.day7
+
+import Day
+import Reader
 import kotlin.math.absoluteValue
 
-class Day7A : Day() {
+class Day7A : Day {
 
     override fun run(): Long {
         return formatInputs().keys.map { position ->
@@ -12,7 +16,7 @@ class Day7A : Day() {
 
 }
 
-class Day7B : Day() {
+class Day7B : Day {
 
     override fun run(): Long {
         val inputPositions = formatInputs()

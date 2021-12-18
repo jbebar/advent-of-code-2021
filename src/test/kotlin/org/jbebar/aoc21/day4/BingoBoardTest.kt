@@ -1,4 +1,7 @@
-import BingoBoard.Square
+package org.jbebar.aoc21.day4
+
+import org.jbebar.aoc21.day4.BingoBoard
+import org.jbebar.aoc21.day4.BingoBoard.Square
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

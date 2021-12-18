@@ -1,6 +1,9 @@
+package org.jbebar.aoc21.day1
+
+import Day
 import Reader.readInputs
 
-class Day1A : Day() {
+class Day1A : Day {
 
     override fun run(): Long {
 
@@ -25,7 +28,7 @@ class Day1A : Day() {
 
 }
 
-class Day1B : Day() {
+class Day1B : Day {
 
 
     override fun run(): Long {

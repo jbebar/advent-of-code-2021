@@ -1,3 +1,6 @@
+package org.jbebar.aoc21.day7
+
+import org.jbebar.aoc21.day7.computeConsumption
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource

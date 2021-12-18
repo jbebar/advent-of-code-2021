@@ -1,4 +1,9 @@
-class Day6A : Day() {
+package org.jbebar.aoc21.day6
+
+import Day
+import Reader
+
+class Day6A : Day {
 
     override fun run(): Long {
         val numberOfDays = 80 // Out of memory error with 256 elements
@@ -30,7 +35,7 @@ class Day6A : Day() {
 }
 
 
-class Day6B : Day() {
+class Day6B : Day {
 
     // From answer on https://github.com/jntakpe/aoc2021
 

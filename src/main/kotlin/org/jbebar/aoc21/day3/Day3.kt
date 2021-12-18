@@ -1,6 +1,9 @@
+package org.jbebar.aoc21.day3
+
+import Day
 import Reader.readInputs
 
-class Day3A : Day() {
+class Day3A : Day {
 
     override fun run(): Long {
         val bits = retrieveBits()
@@ -41,7 +44,7 @@ class Day3A : Day() {
 }
 
 
-class Day3B : Day() {
+class Day3B : Day {
 
     override fun run(): Long {
         val bits = retrieveBits()

@@ -1,6 +1,11 @@
 @file:Suppress("unused")
 
-class Day8A : Day() {
+package org.jbebar.aoc21.day8
+
+import Day
+import Reader
+
+class Day8A : Day {
 
     override fun run(): Long {
         return Reader.readInputs("Day8.txt").map {
@@ -22,7 +27,7 @@ class Day8A : Day() {
 
 }
 
-class Day8B : Day() {
+class Day8B : Day {
 
     override fun run(): Long {
         return Reader.readInputs("Day8.txt").map {

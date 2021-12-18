@@ -1,6 +1,9 @@
+package org.jbebar.aoc21.day2
+
+import Day
 import Reader.readInputs
 
-class Day2A : Day() {
+class Day2A : Day {
 
     override fun run(): Long {
         val inputs = retrieveBits()
@@ -25,7 +28,7 @@ class Day2A : Day() {
 }
 
 
-class Day2B : Day() {
+class Day2B : Day {
 
     class Coordinates(val aim: Int, val xPosition: Int, val depth: Int)
 

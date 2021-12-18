@@ -1,3 +1,6 @@
+package org.jbebar.aoc21.day4
+
+import Day
 import Reader.readInputs
 
 class BingoBoard(private val squares: List<Square>, val firstWinningDraw: UInt? = null) {
@@ -55,7 +58,7 @@ class BingoBoard(private val squares: List<Square>, val firstWinningDraw: UInt? 
 
 }
 
-class Day4A : Day() {
+class Day4A : Day {
 
     override fun run(): Long {
         val draws = readDraws()
@@ -77,7 +80,7 @@ class Day4A : Day() {
 
 }
 
-class Day4B : Day() {
+class Day4B : Day {
 
     override fun run(): Long {
         val draws = readDraws()

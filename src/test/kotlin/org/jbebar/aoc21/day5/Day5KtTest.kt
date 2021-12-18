@@ -1,3 +1,5 @@
+package org.jbebar.aoc21.day5
+
 import org.junit.jupiter.api.Test
 
 internal class Day5KtTest {
@@ -23,7 +25,7 @@ internal class Day5KtTest {
     @Test
     internal fun `should return segment for diagonal line at 45 degrees reverted`() {
         val segmentPoints = toSegment(Point(2, 0), Point(0, 2))
-        assert(segmentPoints.containsAll(listOf(Point(2, 0), Point(1,1),Point(0, 2))))
+        assert(segmentPoints.containsAll(listOf(Point(2, 0), Point(1, 1), Point(0, 2))))
     }
 
     @Test

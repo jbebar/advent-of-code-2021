@@ -1,4 +1,5 @@
 import org.assertj.core.api.WithAssertions
+import org.jbebar.aoc21.day8.*
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
