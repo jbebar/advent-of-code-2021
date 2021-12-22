@@ -11,32 +11,28 @@ internal class Day9BTest : WithAssertions {
     internal fun `should count basins size simple case`() {
         val inputMap =
             """
-              7775
-              8175
-              7775
-              5555
-              5555
+              777
+              817
+              777
             """
 
-        assertThat(inputMap.countBasins()).isEqualTo(9)
+        assertThat(inputMap.countBasins()).isEqualTo(5)
     }
 
     @Test
     internal fun `should count basins size  and ignore 9 values`() {
         val inputMap =
             """
-              7998
-              8195
-              7775
-              5555
-              5555
+              999
+              919
+              999
             """
 
-        assertThat(inputMap.countBasins()).isEqualTo(6)
+        assertThat(inputMap.countBasins()).isEqualTo(1)
     }
 
     @Test
-    internal fun `should count basins size for river pattern`() {
+    internal fun `should count basins size for line of points`() {
         val inputMap =
             """
               9999
@@ -46,7 +42,7 @@ internal class Day9BTest : WithAssertions {
               9499
             """
 
-        assertThat(inputMap.countBasins()).isEqualTo(1)
+        assertThat(inputMap.countBasins()).isEqualTo(4)
     }
 
     @Test
@@ -60,10 +56,9 @@ internal class Day9BTest : WithAssertions {
               9921
             """
 
-        assertThat(inputMap.countBasins()).isEqualTo(4)
+        assertThat(inputMap.countBasins()).isEqualTo(6)
     }
 
-    @Disabled("WIP day 9B")
     @Test
     internal fun `should count basins size for multiple basins`() {
         val inputMap =
