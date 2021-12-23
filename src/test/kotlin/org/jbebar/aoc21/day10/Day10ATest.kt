@@ -12,7 +12,7 @@ internal class Day10ATest : WithAssertions {
 
     @Test
     internal fun `retrieve no illegal character`() {
-        assertThat(day10A.retrieveIllegalCharacter("[]")).isNull()
+        assertThat(retrieveIllegalCharacter("[]")).isNull()
     }
 
     @ParameterizedTest
@@ -24,7 +24,7 @@ internal class Day10ATest : WithAssertions {
     ]
     )
     internal fun `retrieve first illegal character simple case`(inputChunk: String) {
-        assertThat(day10A.retrieveIllegalCharacter(inputChunk)).isEqualTo(inputChunk[1])
+        assertThat(retrieveIllegalCharacter(inputChunk)).isEqualTo(inputChunk[1])
     }
 
     @ParameterizedTest
@@ -41,7 +41,7 @@ internal class Day10ATest : WithAssertions {
             "{([(<{}[<>[]}>{[]{[(<()>, }",
     )
     internal fun `retrieve first illegal character complete case`(inputChunk: String, illegalCharacter:String) {
-        assertThat(day10A.retrieveIllegalCharacter(inputChunk)).isEqualTo(illegalCharacter[0])
+        assertThat(retrieveIllegalCharacter(inputChunk)).isEqualTo(illegalCharacter[0])
     }
 
     @Test
