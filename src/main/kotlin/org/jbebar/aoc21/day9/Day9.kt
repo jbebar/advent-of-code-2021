@@ -1,3 +1,6 @@
+package org.jbebar.aoc21.day9
+
+import Day
 import kotlin.math.max
 
 class Day9A : Day {

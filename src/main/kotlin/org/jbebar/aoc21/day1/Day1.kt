@@ -1,7 +1,7 @@
 package org.jbebar.aoc21.day1
 
 import Day
-import Reader.readInputs
+import Reader.readInputLines
 
 class Day1A : Day {
 
@@ -9,7 +9,7 @@ class Day1A : Day {
 
         // For loops way
 
-        val inputMeasurements = readInputs("Day1.txt").map { it.toInt() }
+        val inputMeasurements = readInputLines("Day1.txt").map { it.toInt() }
         var previousMeasurement: Int? = null
         var result = 0
         for (currentMeasurement in inputMeasurements.toList()) {
@@ -35,7 +35,7 @@ class Day1B : Day {
 
         // For loops way
 
-        val inputMeasurements = readInputs("Day1.txt").map { it.toInt() }
+        val inputMeasurements = readInputLines("Day1.txt").map { it.toInt() }
         var previousMeasurement: Int? = null
         var result = 0
 

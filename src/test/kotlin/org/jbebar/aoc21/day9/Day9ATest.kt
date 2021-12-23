@@ -1,10 +1,7 @@
 package org.jbebar.aoc21.day9
 
-import Point
-import countRiskLevel
 import org.assertj.core.api.WithAssertions
 import org.junit.jupiter.api.Test
-import read
 
 internal class Day9ATest : WithAssertions {
 

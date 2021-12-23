@@ -58,5 +58,5 @@ class Day6B : Day {
 
 }
 
-private fun formatInput() = Reader.readInputs("Day6.txt").first().split(",").map { it.toInt() }
+private fun formatInput() = Reader.readInputLines("Day6.txt").first().split(",").map { it.toInt() }
 
