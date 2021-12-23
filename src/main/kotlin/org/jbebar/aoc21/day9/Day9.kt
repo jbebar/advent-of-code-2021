@@ -1,5 +1,3 @@
-@file:Suppress("unused")
-
 import kotlin.math.max
 
 class Day9A : Day {

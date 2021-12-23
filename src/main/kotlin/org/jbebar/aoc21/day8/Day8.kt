@@ -1,5 +1,3 @@
-@file:Suppress("unused")
-
 package org.jbebar.aoc21.day8
 
 import Day
