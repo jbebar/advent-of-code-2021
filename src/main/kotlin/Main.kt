@@ -1,5 +1,6 @@
 import org.jbebar.aoc21.day1.Day1B
 import org.jbebar.aoc21.day10.Day10A
+import org.jbebar.aoc21.day10.Day10B
 import org.jbebar.aoc21.day2.Day2A
 import org.jbebar.aoc21.day2.Day2B
 import org.jbebar.aoc21.day3.Day3A
@@ -38,6 +39,7 @@ fun main(args: Array<String>) {
             Day9A().toRunEntry(),
             Day9B().toRunEntry(),
             Day10A().toRunEntry(),
+            Day10B().toRunEntry(),
     )[args[0]]!!
     println("Result ${args[0]} : ${day.run()}")
 }
