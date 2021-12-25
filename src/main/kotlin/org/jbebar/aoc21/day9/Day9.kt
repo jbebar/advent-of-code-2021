@@ -1,7 +1,6 @@
 package org.jbebar.aoc21.day9
 
 import Day
-import kotlin.math.max
 
 class Day9A : Day {
 
@@ -68,8 +67,6 @@ data class Point(val y: Int, val x: Int) {
 
 }
 
-data class PointProperties(val heigth: Int, val isLowPoint: Boolean)
-
 private fun findBasinPoints(
         originPointToHeight: Pair<Point, Int>,
         allPointsToHeight: Map<Point, Int>,
@@ -87,19 +84,6 @@ private fun findBasinPoints(
         }
     }
     return basinPoints
-}
-
-private fun Pair<Int, Int>.hasEnoughNeighbors(otherPoints: List<Point>): Boolean {
-    val neighbors = mutableListOf<Point>()
-    for (y in max(first - 1, 0)..max(second + 1, 0)) {
-        for (x in max(second - 1, 0)..max(first + 1, 0)) {
-            val currentPoint = Point(y, x)
-            if (otherPoints.contains(currentPoint)) {
-                neighbors.add(currentPoint)
-            }
-        }
-    }
-    return neighbors.size >= 2
 }
 
 private fun Map.Entry<Point, Int>.isLowPoint(map: Map<Point, Int>): Boolean {

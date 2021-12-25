@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 internal class Day10BTest : WithAssertions {
 
     @Test
-    internal fun `should complete line`() {
+    internal fun `should complete line for first example`() {
         val day10B = Day10B()
 
         val completeLine = day10B.completeLine("[({(<(())[]>[[{[]{<()<>>")
@@ -15,7 +15,7 @@ internal class Day10BTest : WithAssertions {
     }
 
     @Test
-    internal fun `should complete line other case`() {
+    internal fun `should complete line for second example`() {
         val day10B = Day10B()
 
         val completeLine = day10B.completeLine("[(()[<>])]({[<{<<[]>>(")
