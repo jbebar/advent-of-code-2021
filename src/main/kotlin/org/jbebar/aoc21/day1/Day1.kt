@@ -11,19 +11,21 @@ class Day1A : Day {
 
         val inputMeasurements = readInputLines("Day1.txt").map { it.toInt() }
         var previousMeasurement: Int? = null
-        var result = 0
+        var resultForLoopWay = 0
         for (currentMeasurement in inputMeasurements.toList()) {
             if (previousMeasurement != null && previousMeasurement < currentMeasurement) {
-                result++
+                resultForLoopWay++
             }
             previousMeasurement = currentMeasurement
         }
-        println("Result 1A $result")
+        println("Result 1A $resultForLoopWay")
 
         // Functional way
 
         val resultFunctionalWay = inputMeasurements.windowed(2).count { e -> e[0] < e[1] }
-        return result.toLong()
+
+        check(resultFunctionalWay == resultForLoopWay)
+        return resultForLoopWay.toLong()
     }
 
 }
