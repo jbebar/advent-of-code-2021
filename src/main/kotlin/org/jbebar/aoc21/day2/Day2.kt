@@ -1,7 +1,7 @@
 package org.jbebar.aoc21.day2
 
 import Day
-import Reader.readInputs
+import Reader.readInputLines
 
 class Day2A : Day {
 
@@ -52,7 +52,7 @@ class Day2B : Day {
 
 }
 
-private fun retrieveBits() = readInputs("Day2.txt").map {
+private fun retrieveBits() = readInputLines("Day2.txt").map {
     it.split(" ")
 }.map {
     it.first() to it[1].toInt()

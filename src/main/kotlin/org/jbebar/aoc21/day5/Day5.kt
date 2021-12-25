@@ -1,7 +1,7 @@
 package org.jbebar.aoc21.day5
 
 import Day
-import Reader.readInputs
+import Reader.readInputLines
 
 data class Point(val y: Int, val x: Int)
 
@@ -80,6 +80,6 @@ private fun toCoordinateSuite(start: Int, end: Int) =
 
 private fun String.toPoint() = split(",").let { coordinates -> Point(y = coordinates[0].toInt(), x = coordinates[1].toInt()) }
 
-private fun readLines() = readInputs("Day5.txt").map {
+private fun readLines() = readInputLines("Day5.txt").map {
     it.split(" -> ")
 }

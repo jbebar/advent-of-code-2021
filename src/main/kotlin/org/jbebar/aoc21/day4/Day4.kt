@@ -1,7 +1,7 @@
 package org.jbebar.aoc21.day4
 
 import Day
-import Reader.readInputs
+import Reader.readInputLines
 
 class BingoBoard(private val squares: List<Square>, val firstWinningDraw: UInt? = null) {
 
@@ -62,7 +62,7 @@ class Day4A : Day {
 
     override fun run(): Long {
         val draws = readDraws()
-        val bingoBoards = readBingoBoards(readInputs("Day4.txt"))
+        val bingoBoards = readBingoBoards(readInputLines("Day4.txt"))
 
         val result = draws.runningFold(bingoBoards) { acc, uInt ->
             acc.map { bingoBoard ->
@@ -85,7 +85,7 @@ class Day4B : Day {
     override fun run(): Long {
         val draws = readDraws()
 
-        val bingoBoards = readBingoBoards(readInputs("Day4.txt"))
+        val bingoBoards = readBingoBoards(readInputLines("Day4.txt"))
 
         val result = draws.runningFold(bingoBoards) { acc, uInt ->
             acc.map { bingoBoard ->
@@ -110,7 +110,7 @@ class Day4B : Day {
 }
 
 
-private fun readDraws() = readInputs("Day4.txt").first().split(",").map { it.toUInt() }
+private fun readDraws() = readInputLines("Day4.txt").first().split(",").map { it.toUInt() }
 
 private fun readBingoBoards(lines: List<String>): List<BingoBoard> {
     val boardSize = lines.drop(2).takeWhile { it.isNotBlank() }.size

@@ -1,4 +1,6 @@
 import org.jbebar.aoc21.day1.Day1B
+import org.jbebar.aoc21.day10.Day10A
+import org.jbebar.aoc21.day10.Day10B
 import org.jbebar.aoc21.day2.Day2A
 import org.jbebar.aoc21.day2.Day2B
 import org.jbebar.aoc21.day3.Day3A
@@ -13,6 +15,8 @@ import org.jbebar.aoc21.day7.Day7A
 import org.jbebar.aoc21.day7.Day7B
 import org.jbebar.aoc21.day8.Day8A
 import org.jbebar.aoc21.day8.Day8B
+import org.jbebar.aoc21.day9.Day9A
+import org.jbebar.aoc21.day9.Day9B
 
 fun main(args: Array<String>) {
     val day = mapOf<String, Day>(
@@ -34,6 +38,8 @@ fun main(args: Array<String>) {
             Day8B().toRunEntry(),
             Day9A().toRunEntry(),
             Day9B().toRunEntry(),
+            Day10A().toRunEntry(),
+            Day10B().toRunEntry(),
     )[args[0]]!!
     println("Result ${args[0]} : ${day.run()}")
 }

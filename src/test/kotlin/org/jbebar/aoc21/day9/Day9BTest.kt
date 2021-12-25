@@ -1,8 +1,6 @@
 package org.jbebar.aoc21.day9
 
-import countBasins
 import org.assertj.core.api.WithAssertions
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class Day9BTest : WithAssertions {

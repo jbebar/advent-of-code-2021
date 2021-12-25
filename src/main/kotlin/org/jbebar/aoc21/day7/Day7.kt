@@ -40,4 +40,4 @@ fun computeConsumption(distance: Int): Int {
     }
 }
 
-private fun formatInputs() = Reader.readInputs("Day7.txt").first().split(",").map { it.toInt() }.groupBy { it }.mapValues { it.value.count() }
+private fun formatInputs() = Reader.readInputLines("Day7.txt").first().split(",").map { it.toInt() }.groupBy { it }.mapValues { it.value.count() }

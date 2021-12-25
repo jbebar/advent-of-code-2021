@@ -1,7 +1,7 @@
 package org.jbebar.aoc21.day3
 
 import Day
-import Reader.readInputs
+import Reader.readInputLines
 
 class Day3A : Day {
 
@@ -96,4 +96,4 @@ private fun computeMostCommonBit(bits: List<String>, index: Int): Char {
     }
 }
 
-private fun retrieveBits() = readInputs("Day3.txt")
+private fun retrieveBits() = readInputLines("Day3.txt")

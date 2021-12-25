@@ -6,7 +6,7 @@ import Reader
 class Day8A : Day {
 
     override fun run(): Long {
-        return Reader.readInputs("Day8.txt").map {
+        return Reader.readInputLines("Day8.txt").map {
             it.split("|")[1]
         }.map {
             it.split(" ")
@@ -28,7 +28,7 @@ class Day8A : Day {
 class Day8B : Day {
 
     override fun run(): Long {
-        return Reader.readInputs("Day8.txt").map {
+        return Reader.readInputLines("Day8.txt").map {
             it.split("|")
         }.map {
             it[0].split(" ") to it.toDigits()
